@@ -39,17 +39,18 @@ ENV["GOOGLE_DEFAULT_CLIENT_ID"]="invalid"
 ENV["GOOGLE_DEFAULT_CLIENT_SECRET"]="invalid"
 
 opts = [
-  "--no-default-browser-check",
-  "--no-first-run",
   "--disable-background-networking",
   "--disable-client-side-phishing-detection",
   "--disable-component-update",
   "--disable-sync",
   "--disable-translate",
   "--disable-web-resources",
+  "--disable-xss-auditor",
+  "--no-default-browser-check",
+  "--no-first-run",
+  "--proxy-server=#{@proxyhost}:#{@proxyport}",
   "--safebrowsing-disable-auto-update",
   "--safebrowsing-disable-download-protection",
-  "--proxy-server=#{@proxyhost}:#{@proxyport}",
   "--user-data-dir=#{@profiledir}",
 ]
 
